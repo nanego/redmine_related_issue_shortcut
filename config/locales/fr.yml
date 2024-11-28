@@ -2,3 +2,5 @@ fr:
   label_create_related_issue_shortcut: "Créer une demande liée"
   setting_create_related_issue_shortcut: "Afficher un raccourci pour créer une demande liée"
   setting_create_related_issue_shortcut_project_id: "Projet où créer les demandes liées"
+  label_attachment_plural: "Photos ou Fichiers"
+  field_requester: "Demandeur"
