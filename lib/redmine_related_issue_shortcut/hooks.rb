@@ -9,7 +9,7 @@ module RedmineRelatedIssueShortcut
 
   class ModelHook < Redmine::Hook::Listener
     def after_plugins_loaded(_context = {})
-
+      require_relative 'issues_controller_patch'
     end
   end
 end
