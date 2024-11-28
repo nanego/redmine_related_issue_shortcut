@@ -1,0 +1,15 @@
+<% @related_id =  params[:related_to] if params[:related_to].present? %>
+<% @related_id =  @related_to if @related_to.present? # Case of fail validation %>
+<% if @related_id.present? %>
+
+  <% @related_issue = Issue.where(id: @related_id).first %>
+  <% if @related_issue.present? %>
+    <div class="box tabular">
+      <p style="line-height: 2em;">
+        <%= select_tag 'issue[relation_type]', options_for_select(collection_for_relation_type_select) %>
+        la demande <%= link_to_issue @related_issue %>
+      </p>
+      <%= f.hidden_field :related_issue, value: @related_id %>
+    </div>
+  <% end %>
+<% end %>

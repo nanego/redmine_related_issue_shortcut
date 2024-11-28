@@ -1,0 +1,4 @@
+en:
+  label_create_related_issue_shortcut: "Create a related issue"
+  setting_create_related_issue_shortcut: "Display a shortcut to create a related issue"
+  setting_create_related_issue_shortcut_project_id: "Project where to create related issues"
