@@ -14,6 +14,7 @@ Redmine::Plugin.register :redmine_related_issue_shortcut do
   settings partial: 'settings/redmine_plugin_related_issue_shortcut_settings',
            default: {
              'create_related_issue_shortcut': '',
-             'create_related_issue_shortcut_project_id': ''
+             'create_related_issue_shortcut_project_id': '',
+             'create_related_issue_shortcut_closed_status_id': '',
            }
 end

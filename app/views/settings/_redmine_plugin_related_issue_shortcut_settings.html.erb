@@ -12,3 +12,9 @@
                  project_tree_options_for_select(Project.active.sorted,
                                                  selected: Project.where(id: Setting["plugin_redmine_related_issue_shortcut"]["create_related_issue_shortcut_project_id"]).first) %>
 </p>
+<p>
+  <%= label_tag l("setting_create_related_issue_shortcut_closed_status_id") %>
+  <%= select_tag "settings[create_related_issue_shortcut_closed_status_id]",
+                 options_for_select(IssueStatus.all.map { |status| [status.name, status.id] },
+                                    Setting["plugin_redmine_related_issue_shortcut"]["create_related_issue_shortcut_closed_status_id"]) %>
+</p>

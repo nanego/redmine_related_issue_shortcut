@@ -1,6 +1,7 @@
 fr:
-  label_create_related_issue_shortcut: "Créer une demande liée"
+  label_close_and_create_related_issue_shortcut: "Fermer et créer une demande liée"
   setting_create_related_issue_shortcut: "Afficher un raccourci pour créer une demande liée"
   setting_create_related_issue_shortcut_project_id: "Projet où créer les demandes liées"
+  setting_create_related_issue_shortcut_closed_status_id: "Statut à appliquer lors de la fermeture de la demande"
   label_attachment_plural: "Photos ou Fichiers"
   field_requester: "Demandeur"

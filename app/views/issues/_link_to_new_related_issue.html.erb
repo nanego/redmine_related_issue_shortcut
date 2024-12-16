@@ -1,14 +1,9 @@
-<% if Setting["plugin_redmine_related_issue_shortcut"]["create_related_issue_shortcut"].present?
-     new_issue_description = ""
-     new_issue_description << "#{l('field_requester')}: #{@issue.author} (#{@issue.author.mail})"
-     new_issue_description << "\r\n-----------\r\n"
-     new_issue_description << @issue.description
-%>
+<% if Setting["plugin_redmine_related_issue_shortcut"]["create_related_issue_shortcut"].present? %>
 
-  <%= link_to l(:label_create_related_issue_shortcut),
+  <%= link_to l(:label_close_and_create_related_issue_shortcut),
               new_project_issue_path(project_id: Setting["plugin_redmine_related_issue_shortcut"]["create_related_issue_shortcut_project_id"] || @project.id,
-                                     'unregistered_watchers' => [@issue.author.mail],
-                                     'issue[description]' => new_issue_description,
+                                     'issue[unregistered_watchers]' => @issue.author.mail,
+                                     'issue[description]' => @issue.description,
                                      related_to: @issue,),
               class: "icon icon-link-break" %>
 <% end %>
